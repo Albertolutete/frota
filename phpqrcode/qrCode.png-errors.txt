@@ -1,0 +1,1 @@
+2022-02-03 13:43:18: imagepng(imagens/qrCode.png): failed to open stream: No such file or directory

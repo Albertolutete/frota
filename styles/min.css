@@ -1,0 +1,89 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #000 !important;
+    background: #ffd65e;
+    background: -moz-linear-gradient(top, #f56042 0%, #febf04 100%);
+    background: -webkit-linear-gradient(top, #f56042 0%, #febf04 100%);
+    background: linear-gradient(to bottom, #f56042 0%, #febf04 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#788895', endColorstr='#ffffff',GradientType=0 );
+}
+
+footer {
+    position: relative;
+    top: 100px;
+}
+
+.card-center {
+    top: 40% !important;
+}
+p {
+    color: #000 !important;
+    font-weight: bold;
+}
+.gradient-yellow1 {
+    color: #fff !important;
+    background-color: #f9ff67ad !important;
+    border-style: solid !important;
+    border-color: #f6b842 !important;
+    border-width: 1px !important;
+}
+
+.gradient-blue1 {
+    color: #fff !important;
+    background-color: #4a89dcad !important;
+    border-style: solid !important;
+    border-color: #0a76ff !important;
+    border-width: 1px !important;
+}
+
+.gradient-red1 {
+    color: #fff !important;
+    background-color: #ff2f44ad !important;
+    border-style: solid !important;
+    border-color: #ff011c !important;
+    border-width: 1px !important;
+}
+
+.gradient-orange1 {
+    color: #fff !important;
+    background-color: #df9b3dad !important;
+    border-style: solid !important;
+    border-color: #e9773f !important;
+    border-width: 1px !important;
+}
+
+.gradient-green1 {
+    color: #fff !important;
+    background-color: #a0d468ad !important;
+    border-style: solid !important;
+    border-color: #8cc152 !important;
+    border-width: 1px !important;
+}
+.gradient-cyan1 {
+    color: #fff !important;
+    background-color: #1be4ffa3 !important;
+    border-style: solid !important;
+    border-color: #0188ff !important;
+    border-width: 1px !important;
+}
+
+.text-shadow-l {
+    text-shadow: 0 1px 2px #000000c4 !important;
+}
+
+.rounded-xl {
+    border-radius: 5px !important;
+}
+
+.men {
+    margin-top: 10px !important;
+    margin-bottom: 1rem !important;
+    font-weight: bold !important;
+    font-size: small !important;
+    line-height: initial !important;
+}
+
+

@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+
+    min-height: 100vh;
+}
+
+/* ==================================================================================== */
+/* Improvisando um cabecalho e titulo */
+
+.cabecalho {
+    width: 100%;
+    height: 100px;
+    background: #150d57;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.titulo {
+    background-color: #ccc;
+    height: 60px;
+    font-size: 15px;
+    border-bottom: #ccc solid 1px;
+    /* margin-top: 30px; */
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fim improvisando um cabecalho */
+/* ==================================================================================== */
+
+/* Corpo */
+
+.wrapper {
+    width: 80%;
+    padding: 0 20px;
+    box-shadow: -3px 5px 22px 3px rgba(0, 0, 0, 0.2),
+        3px -1px 22px 3px rgba(0, 0, 0, 0.16);
+    padding: 50px;
+    margin-top: 70px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.wrapper .parent-tab {
+    margin-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    min-width: 100%;
+}
+.parent-tab {
+    padding: 20px;
+}
+
+.wrapper .parent-tab label {
+    background: #007bff;
+    padding: 10px 20px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    z-index: 99;
+}
+
+.wrapper label span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0px -1px 2px #0056b3;
+}
+
+.wrapper label .icon {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    /* background: #007bff; */
+    border-radius: 50%;
+    text-shadow: 0 -1px 1px #0056b3;
+}
+
+.wrapper label .icon-check {
+    position: relative;
+    height: 28px;
+    /* width: 28px; */
+    /* color: #007bff; */
+    font-size: 15px;
+    display: block;
+    /* border-radius: 50%; */
+    text-shadow: 0 -1px 1px #0056b3;
+    margin-right: 10px;
+}
+
+.wrapper label .icon-check i {
+    color: rgb(228, 58, 6);
+    font-size: 28px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .parent-tab input:checked ~ label .icon i::before {
+    /* plus */
+    content: "\f067";
+}
+
+.wrapper .parent-tab input:checked ~ label .icon.hide i::before {
+    /* minus */
+    display: inline-block;
+    transform: rotate(180deg);
+    transition: all 0.51s ease;
+    content: "\f068";
+}
+
+.wrapper label .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tab-3 input:checked ~ .content {
+    padding: 0px;
+}
+
+.wrapper .parent-tab .content {
+    max-height: 0vh;
+    overflow: show;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    box-sizing: border-box;
+}
+/* ====================================================== */
+.parent-tab label.active ~ .content {
+    pointer-events: auto;
+    max-height: 100vh;
+    opacity: 1;
+    overflow: show;
+}
+
+/* .parent-tab input:checked ~ .content {
+    max-height: 100%;
+    opacity: 1;
+    overflow: auto;
+    transition: all .7s ease;
+} */
+
+/* ================================================= */
+/* Para JS */
+
+.wrapper .parent-tab .content .form-tab-1 {
+    font-size: 16px;
+    padding: 0px 20px;
+}
+
+.wrapper input.hide {
+    transition: all 0.7s ease;
+    display: none;
+}
+
+/* ==================================================================== */
+/* Formularios */
+.form-tab-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .form-input {
+    margin-bottom: 15px;
+}
+
+.form-tab-1 .form-input span {
+    display: inline-block;
+    padding: 10px 0px;
+    text-align: end;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.form-tab-1 .submitBtn {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitBtn-all {
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    margin-top: 70px;
+}
+
+.form-input input,
+.form-input select,
+.form-input textarea {
+    width: 100%;
+    height: 34px;
+    font-size: 16px;
+    padding-right: 10px;
+    font-style: italic;
+    border: none;
+    border-bottom: #ccc solid 1px;
+}
+
+/* .equipamento .form-input input {
+    width: 100%;
+} */
+
+input:disabled {
+    background-color: #ccc;
+}
+
+.form-input textarea {
+    border: #ccc solid 1px;
+    height: 150px;
+    padding: 10px;
+    font-style: unset;
+    outline: none;
+}
+
+.form-input select {
+    padding: 0 10px;
+    background-color: aliceblue;
+    appearance: none;
+}
+
+/* .form-input select::after {
+    font-size: 33px;
+} */
+
+.form-input input:focus,
+.form-input select:focus {
+    border-bottom: #b6b4b4 solid 2px;
+    outline: none;
+}
+
+.form-tab-1 .submitBtn input {
+    border: 0;
+    padding: 10px 14px;
+    border-radius: 5px;
+    background: #0056b3;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+#enviar-form {
+    outline: 0;
+    opacity: 0.5;
+    pointer-events: none;
+    /* margin-top: 15px; */
+}
+
+.form-tab-1 .submitBtn input:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.form-input input::-webkit-file-upload-button {
+    padding: 12px 12px 20px 0px;
+
+    border: 0;
+}
+
+.form-cancel,
+.enviar-form {
+    width: 96%;
+    background: #8b8989;
+    padding: 10px 0;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.enviar-form {
+    border: none;
+    background: #0056b3;
+    cursor: pointer;
+}
+
+.icon-check i,
+.form-input i,
+.signature-pad i,
+.signature-pad-client i {
+    display: none;
+}
+
+.icon-check i.visivel,
+.form-input i.visivel {
+    display: inline;
+    visibility: visible;
+}
+
+.parent-tab .equipamento {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px;
+}
+
+.parent-tab .equipamento .form-input {
+    position: relative;
+    overflow: visible;
+}
+
+.parent-tab .equipamento .form-input {
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.parent-tab .equipamento .fabricante {
+    /* background-color: #97bee7; */
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+}
+
+.parent-tab .equipamento .fabricante input {
+    width: 97%;
+}
+
+.parent-tab .form-input input {
+    margin-top: 10px;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.16);
+    border: 1px solid rgb(199, 188, 188);
+    border-radius: 8px;
+    padding-left: 15px;
+    border-bottom: #8b8989 solid 1px;
+}
+
+.parent-tab .form-input input:focus {
+    background-color: aliceblue;
+}
+
+.parent-tab h1 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    background-color: #97bee7;
+}
+
+label {
+    text-transform: capitalize;
+}
+
+#date_id {
+    outline: 5px;
+    width: 30%;
+    font-size: 18px;
+}
+@media (max-width: 900px) {
+    #date_id {
+        width: 80%;
+    }
+
+    .parent-tab h1 {
+        font-size: 16px;
+    }
+
+    .parent-tab .equipamento {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    .parent-tab h1 {
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+
+    .parent-tab label span {
+        word-break: break-all;
+    }
+
+    .submitBtn-all {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .submitBtn-all input {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .form-tab-1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper label span {
+        color: #fff;
+        font-size: 17px;
+        font-weight: 600;
+        text-shadow: 0px -1px 2px #0056b3;
+        word-wrap: break-word;
+    }
+
+    .wrapper {
+        width: 90%;
+        padding: 30px 2px;
+    }
+    .wrapper .parent-tab {
+        width: 98%;
+        margin: 0;
+        margin-top: 10px;
+        padding: 15px 15px;
+    }
+}
+/* ============================================================ */
+/* Assinatura digital */
+#sign {
+    border: 1px solid #8b8989;
+}

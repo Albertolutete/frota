@@ -1,0 +1,222 @@
+/* .content-wrapper {
+} */
+
+.popup-container {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    bottom: 94%;
+    background-color: rgba(175, 170, 170, 0.178);
+}
+
+.popup-msg {
+    position: absolute;
+    top: 10%;
+    /* left: 100%; */
+    /* right: 0; */
+    right: -370px;
+
+    transition: .3s ease-out;
+
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 999;
+    /* display: none; */
+}
+
+.popup-container.mostrar {
+    /* display: inline-block; */
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.popup-container.mostrar .popup-msg {
+    right: 0%;
+    /* left: auto; */
+}
+
+.popup-sucesso {
+    display: flex;
+    width: 370px;
+    background-color: #7fffd4;
+    padding: 12px 10px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.popup-checkado, .popup-fechar {
+    width: 35px;
+    height: 35px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-right: 10px;
+}
+
+.popup-fechar {
+    margin-left: 10px;
+}
+
+#chamados-detail {
+    display: flex;
+    justify-content: space-around;
+}
+
+#chamados-detail .descricao {
+    padding: 20px;
+    flex-basis: 2;
+    width: 55%;
+}
+
+#chamados-detail .descricao th, #equipamento-detail .descricao th, .descricao td {
+    padding: 4px 14px;
+    text-align: end;
+    font-size: 18px;
+    background-color: #f1f1f1;
+}
+
+#chamados-detail tr, #chamados-detail th, #chamados-detail td {
+    border-top: rgb(255, 255, 255) solid 2px;
+}
+
+.descricao tr td:nth-last-child(odd) {
+    /* width: 60%; */
+    background-color: #ffffff;
+    padding-left: 10px;
+    border-bottom: 2px solid rgb(243, 236, 236);
+    text-align: left;
+}
+
+#anexo-chamado {
+    width: 25%;
+    height: 350px;
+}
+
+#anexo-chamado img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Modal mais detalhes do equipamento */
+
+#equipamento-detail {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+@media only screen and (max-width: 1000px) {
+    #equipamento-detail {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #equipamento-detail .componentes h4 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#modal-xl-info .modal-body {
+    padding: 15px 40px;
+
+}
+
+#equipamento-detail .anexo {
+    display: flex;
+    flex-direction: column;
+    color: #0b6bda;
+}
+
+@keyframes append-animate {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.new-box {
+    transform-origin: 50% 0;
+    animation: append-animate .3s linear;
+}
+
+.componente-detail .componentes .subComponentes {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    opacity: 0;
+    transition: ease .3s;
+}
+
+.componente-detail .componentes .subComponentes.activo {
+    height: 100%;
+    padding: 15px 30px;
+    pointer-events: auto;
+    opacity: 1;
+    /* color: #f1f1f1; */
+}
+
+select option[value="#fff3cd"]{
+	color: #664d03;
+	background-color: #fff3cd;
+	border-color: #ffecb5;
+}
+select option[value="#cfe2ff"]{
+	color: #084298;
+	background-color: #cfe2ff;
+	border-color: #b6d4fe;
+}
+select option[value="#fefefe"]{
+	color: #636464;
+	background-color: #fefefe;
+	border-color: #fdfdfe;
+}
+select option[value="#cff4fc"]{
+	color: #055160;
+	background-color: #cff4fc;
+	border-color: #b6effb;
+}
+select option[value="#e2e3e5"]{
+	color: #41464b;
+	background-color: #e2e3e5;
+	border-color: #d3d6d8;
+}
+select option[value="#d3d3d4"]{
+	color: #141619;
+	background-color: #d3d3d4;
+	border-color: #bcbebf;
+}
+select option[value="#d1e7dd"]{
+	color: #0f5132;
+	background-color: #d1e7dd;
+	border-color: #badbcc;
+}
+select option[value="#f8d7da"]{
+	color: #842029;
+	background-color: #f8d7da;
+	border-color: #f5c2c7;
+}
+td{
+	 vertical-align: text-top !important;
+}
+
+.calevt{
+margin-bottom: 2px;
+padding-bottom: 23px;
+padding-right: 1px;
+padding-left: 5px;
+-webkit-border-radius: 3px 3px 3px 3px;
+border-radius: 3px 3px 3px 3px;
+}
